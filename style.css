@@ -73,7 +73,7 @@ body {
 }
 
 .hero-image img {
-    max-width: 250px; /* Hero ഇമേജ് സൈസ് കുറച്ചു */
+    max-width: 250px;
     border-radius: 20px;
 }
 
@@ -114,7 +114,7 @@ body {
 }
 
 .screenshot-item {
-    width: 180px; /* സ്ക്രീൻഷോട്ടുകൾക്ക് ഒരേ വലിപ്പം നൽകി */
+    width: 180px; 
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -128,3 +128,4 @@ footer {
 }
 
 footer a { color: #4db6ac; text-decoration: none; }
+
