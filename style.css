@@ -18,13 +18,45 @@ body {
     padding: 0 20px;
 }
 
+/* Toolbar Style  */
+.toolbar {
+    background: var(--white);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.toolbar-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin: 0 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.nav-links i {
+    margin-right: 5px;
+}
+
 /* Hero Section */
 .hero {
     background-color: var(--secondary-color);
-    padding: 80px 0;
+    padding: 60px 0;
 }
 
-.hero .container {
+.hero-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,11 +75,11 @@ body {
 }
 
 .play-badge {
-    width: 200px;
+    width: 180px;
 }
 
 .hero-image img {
-    max-width: 300px; /* Hero ഇമേജ് വലുപ്പം കുറച്ചു */
+    max-width: 250px;
     height: auto;
     border-radius: 20px;
 }
@@ -58,39 +90,50 @@ body {
     text-align: center;
 }
 
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
+    gap: 30px;
 }
 
 .feature-card {
-    padding: 25px;
+    padding: 30px;
     background: #f9f9f9;
     border-radius: 10px;
-    border-bottom: 4px solid var(--primary-color);
+    border-bottom: 5px solid var(--primary-color);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
 }
 
 /* Screenshots Section - FIXED SIZE */
 .screenshots-section {
     padding: 60px 0;
-    background: #fff;
+    background: #f4f4f4;
     text-align: center;
 }
 
 .screenshot-grid {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap;
     margin-top: 30px;
 }
 
 .screenshot-item {
-    width: 220px; /* സ്ക്രീൻഷോട്ടുകളുടെ വലുപ്പം നിയന്ത്രിച്ചു */
+    width: 200px; 
     height: auto;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* Footer */
@@ -109,11 +152,14 @@ footer a {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero .container {
+    .hero-container {
         flex-direction: column;
         text-align: center;
     }
+    .hero-image {
+        margin-top: 30px;
+    }
     .screenshot-item {
-        width: 45%; /* ഫോണിൽ ഒരു വരിയിൽ രണ്ട് ചിത്രങ്ങൾ */
+        width: 45%;
     }
 }
