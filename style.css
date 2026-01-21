@@ -18,49 +18,13 @@ body {
     padding: 0 20px;
 }
 
-/* Toolbar */
-.toolbar {
-    background: var(--white);
-    padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.toolbar-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-logo {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    vertical-align: middle;
-}
-
-.app-name {
-    font-weight: bold;
-    color: var(--primary-color);
-    font-size: 1.2rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-dark);
-    margin-left: 20px;
-    font-weight: 500;
-}
-
 /* Hero Section */
 .hero {
     background-color: var(--secondary-color);
-    padding: 60px 0;
+    padding: 80px 0;
 }
 
-.hero-container {
+.hero .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,60 +36,84 @@ body {
     min-width: 300px;
 }
 
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.play-badge {
+    width: 200px;
+}
+
 .hero-image img {
-    max-width: 250px;
+    max-width: 300px; /* Hero ഇമേജ് വലുപ്പം കുറച്ചു */
+    height: auto;
     border-radius: 20px;
 }
 
-/* Feature Cards */
+/* Features Section */
+.features {
+    padding: 60px 0;
+    text-align: center;
+}
+
 .feature-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
-    padding: 40px 0;
 }
 
 .feature-card {
-    text-align: center;
-    padding: 20px;
+    padding: 25px;
     background: #f9f9f9;
     border-radius: 10px;
     border-bottom: 4px solid var(--primary-color);
 }
 
-.feature-icon {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-/* Screenshots - FIXED SIZE */
+/* Screenshots Section - FIXED SIZE */
 .screenshots-section {
-    padding: 50px 0;
-    text-align: center;
+    padding: 60px 0;
     background: #fff;
+    text-align: center;
 }
 
 .screenshot-grid {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     flex-wrap: wrap;
+    margin-top: 30px;
 }
 
 .screenshot-item {
-    width: 180px; 
+    width: 220px; /* സ്ക്രീൻഷോട്ടുകളുടെ വലുപ്പം നിയന്ത്രിച്ചു */
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
+/* Footer */
 footer {
     background: #263238;
     color: white;
     text-align: center;
-    padding: 30px 0;
+    padding: 40px 0;
 }
 
-footer a { color: #4db6ac; text-decoration: none; }
+footer a {
+    color: #4db6ac;
+    text-decoration: none;
+    margin: 0 10px;
+}
 
+/* Responsive */
+@media (max-width: 768px) {
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .screenshot-item {
+        width: 45%; /* ഫോണിൽ ഒരു വരിയിൽ രണ്ട് ചിത്രങ്ങൾ */
+    }
+}
