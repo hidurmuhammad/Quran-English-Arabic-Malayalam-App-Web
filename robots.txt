@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+
 Sitemap: https://hidurmuhammad.github.io/Quran-English-Arabic-Malayalam-App-Web/sitemap.xml
